@@ -93,50 +93,85 @@
     padding-left: 50px;
     }
 
-    .section-title {
-        width: 80%; /* Adjust percentage as needed */
-        margin: 20px auto;
-        padding: 20px;
+/* ADD CSS SECTION HERE  */
+.login-container {
+    width: 80%; /* Adjust as needed */
+    margin: 50px auto;
+    font-family: sans-serif;
 }
 
-.section-title label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.section-title input[type="text"]
-.section-title input[type="email"],
-.section-title textarea {
-    font-family: 'Poppins', sans-serif;
-    width: 100%;
-    padding: 10px;
+.header-tabs {
+    display: flex;
     margin-bottom: 20px;
+}
+
+.header-tabs .tab {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.header-tabs .tab.active {
+    background-color: #48cbbe; 
+    color: white;
+}
+
+.header-tabs .tab a {
+    text-decoration: none;
+    color: inherit;
+}
+
+form {
+    font-family: 'Poppins', sans-serif;
     border: 1px solid #ccc;
     border-radius: 5px;
+    padding: 20px;
+}
+
+input[type=text],
+input[type=password] {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
     box-sizing: border-box;
-    font-size: 16px;
+    border-radius: 5px;
 }
 
-.section-title textarea {
-    resize: vertical; /* Allow vertical resizing */
-}
-
-.section-title button {
-    background-color: #48cbbe; /* Teal color from your image */
+button {
+    font-family: 'Poppins', sans-serif;
+    background-color: #48cbbe;
     color: white;
-    padding: 15px 30px; /* Adjust padding as needed */
+    padding: 14px 20px;
+    margin: 20px 0 0;
     border: none;
-    border-radius: 30px; /* Large border radius for rounded corners */
-    font-weight: bold;
-    font-size: 18px; /* Adjust font size as needed */
     cursor: pointer;
-    display: block;
-    margin: 20px auto 0;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-.section-title button:hover {
+button:hover {
     background-color: #40b2a6; /* Slightly darker teal on hover */
+}
+
+ .tab:hover {
+    background-color: #d9dfdb;
+ }
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.container {
+    padding: 16px;
 }
 
     /* FOOTER FORMAT */
@@ -195,28 +230,28 @@
             </header>
 
 <!-- CHANGE - TITLE -->
-     <div class="content">
-        <h1>CONTACT US</h1>
-    
-<!-- CHANGE - BODY -->
-    <div class="section-title">
+<div class="content">
 
-            <form>
-                <div>
-                    <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Enter your name" style="width: 100%; padding: 10px; margin-bottom: 10px; box-sizing: border-box;">
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter your email" style="width: 100%; padding: 10px; margin-bottom: 10px; box-sizing: border-box;">
-                </div>
-                <div>
-                    <label for="message">Message</label>
-                    <textarea id="message" rows="3" placeholder="Enter your message" style="width: 100%; padding: 10px; margin-bottom: 10px; box-sizing: border-box;"></textarea>
-                </div>
-                <button type="submit" style="padding: 10px 20px; border: none; cursor: pointer;">SUBMIT</button>
-            </form>
+<!-- CHANGE - BODY -->
+    <div class="login-container">
+        <div class="header-tabs">
+            <div class="tab active">Log in</div>
+            <div class="tab"><a href="signup.html">Sign up</a></div>
+        </div>
+
+        <form action="action_page.php" method="post">
+            <div class="container">
+                <label for="uname"><b>Username*</b></label>
+                <input type="text" placeholder="Enter your name" name="uname" required>
+
+                <label for="psw"><b>Password*</b></label>
+                <input type="password" placeholder="Enter your email" name="psw" required>
+
+                <button type="submit">LOG IN</button>
+            </div>
+        </form>
     </div>
+</div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
