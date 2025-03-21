@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- TITLE  -->
-    <title>Lifeways Medical Supplies - Contact Us</title>
+    <title>Lifeways Medical Supplies - Shopping Cart</title>
 
 
         <!-- FONTS -->
@@ -93,51 +93,59 @@
     padding-left: 50px;
     }
 
-    .section-title {
-        width: 80%; /* Adjust percentage as needed */
-        margin: 20px auto;
-        padding: 20px;
+/* ADD CSS SECTION HERE  */
+.cart-container {
+    font-family: 'Poppins', sans-serif;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 40%;
 }
 
-.section-title label {
-    font-family: 'Poppins', sans-serif;
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.section-title input[type="text"],
-.section-title input[type="email"],
-.section-title textarea {
-    font-family: 'Poppins', sans-serif;
+table {
     width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    border-radius: 5px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
-.section-title textarea {
-    resize: vertical; /* Allow vertical resizing */
+th, td {
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
 }
 
-.section-title button {
-    background-color: #48cbbe; /* Teal color from your image */
-    color: white;
-    padding: 15px 30px; /* Adjust padding as needed */
-    border: none;
-    border-radius: 30px; /* Large border radius for rounded corners */
-    font-weight: bold;
-    font-size: 18px; /* Adjust font size as needed */
+th {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f2f2f2;
+}
+
+.cart-actions {
+    font-family: 'Poppins', sans-serif;
+    text-align: right;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 20px;
+    margin-left: 10px;
     cursor: pointer;
-    display: block;
-    margin: 20px auto 0;
+    border: none;
 }
 
-.section-title button:hover {
-    background-color: #40b2a6; /* Slightly darker teal on hover */
+#update-cart {
+    background-color: #5bc0de;
+    color: white;
+}
+
+#proceed-checkout {
+    background-color: #5cb85c;
+    color: white;
+}
+
+.remove-item {
+    background-color: #d9534f;
+    color: white;
 }
 
     /* FOOTER FORMAT */
@@ -155,11 +163,9 @@
         text-align: center;
     }
 
-
     footer img {
         height: 35px;
     }
-
 
     .footer-icons a {
         margin: 0 10px;
@@ -168,12 +174,11 @@
     }
 
     </style>
-
 </head>
 
 <body>
-          <!-- WHITE HEADER LOGOS -->
-            <header class="top-header">
+              <!-- WHITE HEADER LOGOS -->
+              <header class="top-header">
                 <div class="header-left">
                     <img src="lifeways logo.png" alt="Lifeways Medical Supplies Logo">
                 </div>
@@ -196,32 +201,43 @@
             </header>
 
 <!-- CHANGE - TITLE -->
-     <div class="content">
-        <h1>CONTACT US</h1>
-    
+<div class="content">
+    <h1>Shopping Cart</h1> </div>
+
 <!-- CHANGE - BODY -->
-    <div class="section-title">
-            <form>
-                <div>
-                    <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Enter your name" style="width: 100%; padding: 10px; margin-bottom: 10px; box-sizing: border-box;">
-
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter your email" style="width: 100%; padding: 10px; margin-bottom: 10px; box-sizing: border-box;">
-
-                    <label for="message">Message</label>
-                    <textarea id="message" rows="3" placeholder="Enter your message" style="width: 100%; padding: 10px; margin-bottom: 10px; box-sizing: border-box;"></textarea>
-                </div>
-                <button type="submit" style="padding: 10px 20px; border: none; cursor: pointer;">SUBMIT</button>
-            </form>
+    <div class="cart-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Remove</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="cart-items">
+                </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4" align="right"><strong>Total:</strong></td>
+                    <td id="cart-total">₱0.00</td>
+                </tr>
+            </tfoot>
+        </table>
+        <div class="cart-actions">
+            <button id="update-cart">↑ Update Cart</button>
+            <button id="proceed-checkout">✔ Proceed Checkout</button>
+        </div>
     </div>
 
+    <script src="login.js"></script>
+    <script src="cart.js"></script>
+    <script src="login.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-     </div>
-
-    <!-- BOTTOM -->
+    
     <footer>
         <div class="footer-logo"> 
         <img src="lifeways logo.png" alt="Lifeways Medical Supplies Logo">
@@ -233,7 +249,6 @@
             <a href="https://www.youtube.com"><img src="yt.png" alt="YouTube" style="height: 20px;"></a>
         </div>
     </footer>
-</div>
-
+    
 </body>
 </html>

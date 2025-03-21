@@ -213,7 +213,7 @@ label {
                 </div>
                 
                 <div class="header-right">
-                    <a href="account.html">Your Account</a>
+                    <a href="account.html" id="account-link">Your Account</a>
                     <a href="cart.html"><img src="cart.png" alt="Cart" width="50" height="50" style="height: 30px; margin-left: 10px;"></a>
                 </div>
             </header>
@@ -233,30 +233,29 @@ label {
 <div class="content">
 
 <!-- CHANGE - BODY -->
+<div class="content">
     <div class="login-container">
         <div class="header-tabs">
             <div class="tab active">Log in</div>
             <div class="tab"><a href="signup.html">Sign up</a></div>
         </div>
 
-        <form action="action_page.php" method="post">
+        <form>
             <div class="container">
-                <label for="uname"><b>Username*</b></label>
-                <input type="text" placeholder="Enter your name" name="uname" required>
+                <label for="email"><b>Email*</b></label>  <input type="text" placeholder="Enter your email" name="email" required> <label for="psw"><b>Password*</b></label>
+                <input type="password" placeholder="Enter your password" name="psw" required>
 
-                <label for="psw"><b>Password*</b></label>
-                <input type="password" placeholder="Enter your email" name="psw" required>
-
-                <button type="submit">LOG IN</button>
+                <button id="login-button" type="button">LOG IN</button>
             </div>
         </form>
     </div>
 </div>
 
+    <script src="login.js"></script>
+    <script src="loggedin.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-     </div>
 
     <!-- BOTTOM -->
     <footer>

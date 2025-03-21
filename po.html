@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- TITLE  -->
-    <title>Lifeways Medical Supplies - Contact Us</title>
+    <title>Lifeways Medical Supplies - PO 45 Pulse Oximeter</title>
 
 
         <!-- FONTS -->
@@ -93,51 +93,69 @@
     padding-left: 50px;
     }
 
-    .section-title {
-        width: 80%; /* Adjust percentage as needed */
-        margin: 20px auto;
-        padding: 20px;
-}
-
-.section-title label {
+/* ADD CSS SECTION HERE  */
+.product-container {
+    display: flex;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 80%;
+    margin: 50px auto;
     font-family: 'Poppins', sans-serif;
-    display: block;
-    margin-bottom: 5px;
+}
+
+.product-image img {
+    max-width: 350px; /* Adjust as needed */
+    height: auto;
+}
+
+.product-details {
+    margin-left: 20px;
+}
+
+.price {
+    font-size: 1.2em;
     font-weight: bold;
+    color: #333;
 }
 
-.section-title input[type="text"],
-.section-title input[type="email"],
-.section-title textarea {
-    font-family: 'Poppins', sans-serif;
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    border-radius: 5px;
+.rating {
+    margin: 10px 0;
 }
 
-.section-title textarea {
-    resize: vertical; /* Allow vertical resizing */
-}
-
-.section-title button {
-    background-color: #48cbbe; /* Teal color from your image */
-    color: white;
-    padding: 15px 30px; /* Adjust padding as needed */
-    border: none;
-    border-radius: 30px; /* Large border radius for rounded corners */
-    font-weight: bold;
-    font-size: 18px; /* Adjust font size as needed */
+.star {
+    font-size: 1.5em;
+    color: #ccc; /* Default color for unrated stars */
     cursor: pointer;
-    display: block;
-    margin: 20px auto 0;
 }
 
-.section-title button:hover {
-    background-color: #40b2a6; /* Slightly darker teal on hover */
+.star.rated {
+    color: gold; /* Color for rated stars */
+}
+
+.quantity {
+    font-weight: bold;
+    margin: 10px 0;
+}
+.desc {
+    font-size: 0.9em;
+}
+
+#quantity {
+    padding: 5px;
+    width: 60px;
+}
+
+#addToCart {
+    font-family: 'Poppins', sans-serif;
+    background-color: #48cbbe;
+    color: white;
+    padding: 14px 20px;
+    margin: 20px 0 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
     /* FOOTER FORMAT */
@@ -155,11 +173,9 @@
         text-align: center;
     }
 
-
     footer img {
         height: 35px;
     }
-
 
     .footer-icons a {
         margin: 0 10px;
@@ -196,25 +212,53 @@
             </header>
 
 <!-- CHANGE - TITLE -->
-     <div class="content">
-        <h1>CONTACT US</h1>
-    
+<div class="content">
+
 <!-- CHANGE - BODY -->
-    <div class="section-title">
-            <form>
-                <div>
-                    <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Enter your name" style="width: 100%; padding: 10px; margin-bottom: 10px; box-sizing: border-box;">
+    <div class="product-container">
+        <div class="product-image">
+            <img src="pulse oximeter.jfif" alt="Pulse Oximeter">
+        </div>
+        <div class="product-details">
+            <h2>PO 45 Pulse Oximeter</h2>
+            <p class="price">Php 3,500</p>
+            <div class="rating">
+                <span class="star" data-rating="1">&#9733;</span>
+                <span class="star" data-rating="2">&#9733;</span>
+                <span class="star" data-rating="3">&#9733;</span>
+                <span class="star" data-rating="4">&#9733;</span>
+                <span class="star" data-rating="5">&#9733;</span>
+            </div>
+            <div class="quantity">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" value="1" min="1">
+            </div>
+            <div class="desc">
+                <li>The PO 45 pulse oximeter is the ideal accessory for sport activities at altitude. Whether you’re a mountaineer, skier or amateur pilot, this handy little device gives an overview of your oxygen saturation at all times.</li>
+                <li>Determines arterial oxygen saturation (SpO2), heart rate (pulse rate) and perfusion index (PI)</li>
+                <li>For checking and regularly monitoring oxygen saturation</li>
+                <li>Clinically validated accuracy for home use</li>
+                <li>Respiratory diseases such as asthma, COPD, COVID-19, long COVID and other lung diseases may lead to a drop in oxygen saturation</li>
+                <li>Very simple and totally pain-free measurement</li>
+                <li>Small and light for use at home and on the move</li>
+                <li>Particularly suitable for persons with: heart failure, chronic obstructive pulmonary diseases, bronchial asthma</li>
+                <li>Suitable for sport at high altitudes (e.g. mountaineering, skiing and aviation sports)</li>
+                <li>Symbol display in case of erratic measurement</li>
+                <li>Easy-to-read colour display</li>
+                <li>Colour display with 7 display formats</li>
+                <li>Adjustable display brightness</li>
+                <li>Graphic pulse display</li>
+                <li>Low battery indicator</li>
+                <li>Automatic switch-off</li> 
+                <li>Includes retaining strap and belt pouch</li>
+                <li>Medical device</li>
+            </div>
 
-                    <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter your email" style="width: 100%; padding: 10px; margin-bottom: 10px; box-sizing: border-box;">
-
-                    <label for="message">Message</label>
-                    <textarea id="message" rows="3" placeholder="Enter your message" style="width: 100%; padding: 10px; margin-bottom: 10px; box-sizing: border-box;"></textarea>
-                </div>
-                <button type="submit" style="padding: 10px 20px; border: none; cursor: pointer;">SUBMIT</button>
-            </form>
-    </div>
+            <button id="addToCart">ADD TO CART</button>
+        </div>
+        <script src="script.js"></script>
+    
+</div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
