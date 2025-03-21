@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- TITLE  -->
-    <title>Lifeways Medical Supplies - Log In</title>
+    <title>Lifeways Medical Supplies - About Us</title>
 
 
         <!-- FONTS -->
@@ -94,84 +94,40 @@
     }
 
 /* ADD CSS SECTION HERE  */
-.login-container {
-    width: 80%; /* Adjust as needed */
-    margin: 50px auto;
-    font-family: sans-serif;
-}
-
-.header-tabs {
+.products {
     display: flex;
-    margin-bottom: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px; /* Add padding for spacing */
 }
 
-.header-tabs .tab {
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    flex: 1;
-    padding: 15px;
-    text-align: center;
-    border: 1px solid #ccc;
-    cursor: pointer;
+.product {
+    width: 250px; /* Adjust width as needed */
+    margin: 10px; /* Add margin for spacing between products */
+    padding: 15px; /* Add padding inside each product box */
+    border: 1px solid #ddd; /* Add a light border */
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
 }
 
-.header-tabs .tab.active {
-    background-color: #48cbbe; 
-    color: white;
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
 }
 
-.header-tabs .tab a {
-    text-decoration: none;
-    color: inherit;
-}
-
-form {
-    font-family: 'Poppins', sans-serif;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-}
-
-input[type=text],
-input[type=password] {
-    font-family: 'Poppins', sans-serif;
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    border-radius: 5px;
-}
-
-button {
-    font-family: 'Poppins', sans-serif;
-    background-color: #48cbbe;
-    color: white;
-    padding: 14px 20px;
-    margin: 20px 0 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-button:hover {
-    background-color: #40b2a6; /* Slightly darker teal on hover */
-}
-
- .tab:hover {
-    background-color: #d9dfdb;
- }
-
-label {
-    display: block;
+.product h3 {
     margin-bottom: 5px;
 }
 
-.container {
-    padding: 16px;
+.product a {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent */
+    display: block; /* Make the entire product clickable */
+}
+
+.product a:hover {
+    background-color: #dfdfdf; /* Optional: Slight background change on hover */
 }
 
     /* FOOTER FORMAT */
@@ -189,11 +145,9 @@ label {
         text-align: center;
     }
 
-
     footer img {
         height: 35px;
     }
-
 
     .footer-icons a {
         margin: 0 10px;
@@ -231,26 +185,53 @@ label {
 
 <!-- CHANGE - TITLE -->
 <div class="content">
-
+    <h1>SHOP</h1>
 <!-- CHANGE - BODY -->
-    <div class="login-container">
-        <div class="header-tabs">
-            <div class="tab active">Log in</div>
-            <div class="tab"><a href="signup.html">Sign up</a></div>
+    <div class="products">
+        <div class="product">
+            <a href="stethoscope.html"> 
+                <img src="stethoscope.jpg" alt="Stethoscope">
+                <h3>Lightweight Pediatric Stethoscope (Black)</h3>
+                <p>Php 8,600</p>
+            </a>
         </div>
-
-        <form action="action_page.php" method="post">
-            <div class="container">
-                <label for="uname"><b>Username*</b></label>
-                <input type="text" placeholder="Enter your name" name="uname" required>
-
-                <label for="psw"><b>Password*</b></label>
-                <input type="password" placeholder="Enter your email" name="psw" required>
-
-                <button type="submit">LOG IN</button>
-            </div>
-        </form>
+        <div class="product">
+            <a href="blood_pressure_monitor.html">
+                <img src="blood pressure monitor.jfif" alt="Blood Pressure Monitor">
+                <h3>Blood Pressure Monitor</h3>
+                <p>Php 3,945</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="pulse_oximeter.html">
+                <img src="pulse oximeter.jfif" alt="Pulse Oximeter">
+                <h3>Pulse Oximeter</h3>
+                <p>Php 3,500</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="syringe.html">
+                <img src="syringe.jpg" alt="Syringe with Needle">
+                <h3>Disposable Sterile Syringe With Needle- Luer Lock (10 ml- G23 x 1")</h3>
+                <p>Php 370</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="mask.html">
+                <img src="mask.jpg" alt="Surgical Face Mask">
+                <h3>Surgical Face Mask (MS) (50's/Box)</h3>
+                <p>Php 150</p>
+            </a>
+        </div>
+        <div class="product">
+            <a href="ppe.html">
+                <img src="ppe.jpg" alt="Disposable Sterile Surgical Gown">
+                <h3>Disposable Sterile Surgical Gown- Extra Large</h3>
+                <p>Php 225</p>
+            </a>
+        </div>
     </div>
+    
 </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
